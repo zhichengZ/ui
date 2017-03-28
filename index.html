@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css" media="screen">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #aaa;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <select id="select1" name="">
+        <option value="width">宽度</option>
+        <option value="height">高度</option>
+    </select>
+    <select id="select2" name="">
+        <option value="100px">100px</option>
+        <option value="200px">200px</option>
+        <option value="300px">300px</option>
+        <option value="400px">400px</option>
+        <option value="500px">500px</option>
+    </select>
+    <div id="odiv"></div>
+</body>
+<script type="text/javascript">
+    var selectOne = document.getElementById("select1");
+    var selectTwo = document.getElementById("select2");
+    var odiv = document.getElementById("odiv");
+
+    selectOne.onchange = function(){
+    	if(selectOne.value == "width"){
+    		odiv.style.width = selectTwo.value;
+    	}else if(selectOne.value == "height"){
+    		odiv.style.height = selectTwo.value;
+    	}
+    }
+
+    selectTwo.onchange = function(){
+    	if(selectOne.value == "width"){
+    		odiv.style.width = selectTwo.value;
+    	}else if(selectOne.value == "height"){
+    		odiv.style.height = selectTwo.value;
+    	}
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
